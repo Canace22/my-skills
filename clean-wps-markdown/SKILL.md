@@ -1,6 +1,6 @@
 ---
 name: clean-wps-markdown
-description: Clean Markdown exported from WPS collaborative documents or Kingsoft Docs for use in code repositories. Use when an exported .md file contains list-wrapped headings such as `1. ##`, excessive indentation or blank lines, image-only tables, long kdocs.cn image URLs, or when a user asks to normalize, import, localize images from, or clean up WPS Markdown without rewriting its meaning.
+description: Clean Markdown exported from WPS collaborative documents or Kingsoft Docs for use in code repositories, removing permission-bound WPS images by default. Use when an exported .md file contains list-wrapped headings such as `1. ##`, excessive indentation or blank lines, image-only tables, long kdocs.cn image URLs, or when a user asks to normalize or import WPS Markdown without rewriting its meaning.
 ---
 
 # Clean WPS Markdown
@@ -31,10 +31,10 @@ Keep the ordered-list numbers that WPS attached to headings by default, but move
 
 ## Image handling
 
-- Preserve remote WPS image URLs by default.
-- Use `--drop-images` only when the user says screenshots or images are unnecessary.
-- Use `--download-images <directory>` when repository-local images are required. Resolve a relative directory from the output file's parent and keep an inaccessible remote URL unchanged with a warning.
-- Do not use `--drop-images` and `--download-images` together.
+- Remove standalone images and image-only WPS tables by default. Do not request remote image URLs; they commonly require document permissions or expire outside WPS.
+- Use `--keep-images` only when the user explicitly wants the original remote links.
+- Use `--download-images <directory>` only when the user explicitly wants repository-local images and the URLs are accessible. Resolve a relative directory from the output file's parent and keep an inaccessible remote URL unchanged with a warning.
+- Do not use `--keep-images` and `--download-images` together.
 
 Example:
 

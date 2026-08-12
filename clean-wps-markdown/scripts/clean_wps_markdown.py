@@ -65,7 +65,9 @@ def parse_args() -> argparse.Namespace:
     )
     image_group = parser.add_mutually_exclusive_group()
     image_group.add_argument(
-        "--drop-images", action="store_true", help="remove standalone images"
+        "--keep-images",
+        action="store_true",
+        help="keep remote image links instead of removing images",
     )
     image_group.add_argument(
         "--download-images",
@@ -325,7 +327,7 @@ def main() -> int:
         args.source,
         args.title,
         args.no_title,
-        args.drop_images,
+        not args.keep_images and not args.download_images,
         args.strip_heading_numbers,
     )
     if args.download_images:

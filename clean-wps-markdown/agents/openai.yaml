@@ -1,4 +1,4 @@
 interface:
   display_name: "WPS Markdown Cleaner"
-  short_description: "清理 WPS 导出的 Markdown 结构和图片链接"
+  short_description: "清理 WPS Markdown 并默认移除无权限图片"
   default_prompt: "Use $clean-wps-markdown to clean this WPS-exported Markdown file for use in my project."
