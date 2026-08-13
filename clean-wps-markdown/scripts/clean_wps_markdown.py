@@ -26,6 +26,11 @@ IMAGE_RE = re.compile(
     r"(?:\s+(?P<title>[\"'][^\"']*[\"']))?\)"
 )
 FENCE_RE = re.compile(r"^\s*(`{3,}|~{3,})")
+PLAIN_HEADING_RE = re.compile(r"^(?P<marks>#{1,6})\s+(?P<title>.+?)\s*$")
+HEADING_NUMBER_PREFIX_RE = re.compile(
+    r"^(?:[一二三四五六七八九十百千]+、|"
+    r"\d+(?:\.\d+)*(?:[.、](?!\d)|(?=\s)))\s*"
+)
 CONTENT_TYPE_EXTENSIONS = {
     "image/avif": ".avif",
     "image/gif": ".gif",
@@ -39,6 +44,7 @@ CONTENT_TYPE_EXTENSIONS = {
 @dataclass
 class CleanStats:
     promoted_headings: int = 0
+    renumbered_headings: int = 0
     converted_image_tables: int = 0
     dropped_images: int = 0
     downloaded_images: int = 0
@@ -58,10 +64,19 @@ def parse_args() -> argparse.Namespace:
     title_group.add_argument(
         "--no-title", action="store_true", help="do not add a missing H1"
     )
-    parser.add_argument(
+    heading_number_group = parser.add_mutually_exclusive_group()
+    heading_number_group.add_argument(
         "--strip-heading-numbers",
         action="store_true",
         help="remove ordered-list numbers wrapped around WPS headings",
+    )
+    heading_number_group.add_argument(
+        "--renumber-headings",
+        action="store_true",
+        help=(
+            "renumber content headings: primary sections use Chinese numerals, "
+            "secondary sections use 1, 2, 3, and deeper levels use dotted numbers"
+        ),
     )
     image_group = parser.add_mutually_exclusive_group()
     image_group.add_argument(
@@ -130,6 +145,91 @@ def promote_headings(
             continue
 
         result.append(strip_indent(line, base_indent).rstrip())
+
+    return result
+
+
+def chinese_number(number: int) -> str:
+    """Format a positive integer with common Chinese numerals."""
+    if number <= 0 or number > 999:
+        return str(number)
+    digits = "零一二三四五六七八九"
+    if number < 10:
+        return digits[number]
+    if number < 20:
+        return "十" + (digits[number % 10] if number % 10 else "")
+    if number < 100:
+        return (
+            digits[number // 10] + "十" + (digits[number % 10] if number % 10 else "")
+        )
+    hundreds, remainder = divmod(number, 100)
+    result = digits[hundreds] + "百"
+    if not remainder:
+        return result
+    if remainder < 10:
+        return result + "零" + digits[remainder]
+    return result + chinese_number(remainder)
+
+
+def strip_heading_number_prefix(title: str) -> str:
+    return HEADING_NUMBER_PREFIX_RE.sub("", title, count=1).strip()
+
+
+def renumber_headings(lines: list[str], stats: CleanStats) -> list[str]:
+    """Apply Chinese primary and local Arabic numbering to content headings."""
+    heading_levels = [
+        len(match.group("marks"))
+        for line in lines
+        if (match := PLAIN_HEADING_RE.match(line)) and len(match.group("marks")) > 1
+    ]
+    if not heading_levels:
+        return lines
+
+    primary_level = min(heading_levels)
+    counters = {level: 0 for level in range(primary_level, 7)}
+    result: list[str] = []
+    fence_marker: str | None = None
+
+    for line in lines:
+        fence_match = FENCE_RE.match(line)
+        if fence_match:
+            marker = fence_match.group(1)[0]
+            fence_marker = None if fence_marker == marker else marker
+            result.append(line)
+            continue
+        if fence_marker:
+            result.append(line)
+            continue
+
+        match = PLAIN_HEADING_RE.match(line)
+        if not match:
+            result.append(line)
+            continue
+
+        level = len(match.group("marks"))
+        if level < primary_level:
+            result.append(line)
+            continue
+
+        counters[level] += 1
+        for deeper_level in range(level + 1, 7):
+            counters[deeper_level] = 0
+
+        title = strip_heading_number_prefix(match.group("title"))
+        if level == primary_level:
+            prefix = f"{chinese_number(counters[level])}、"
+        else:
+            local_numbers = [
+                counters[item_level]
+                for item_level in range(primary_level + 1, level + 1)
+            ]
+            if not all(local_numbers):
+                result.append(line)
+                continue
+            prefix = ".".join(str(item) for item in local_numbers) + "、"
+
+        result.append(f"{match.group('marks')} {prefix}{title}")
+        stats.renumbered_headings += 1
 
     return result
 
@@ -289,15 +389,20 @@ def clean_markdown(
     no_title: bool,
     drop_images: bool,
     strip_heading_numbers: bool,
+    should_renumber_headings: bool,
 ) -> tuple[str, CleanStats]:
     stats = CleanStats()
     lines = source_text.replace("\r\n", "\n").replace("\r", "\n").split("\n")
-    lines = promote_headings(lines, stats, strip_heading_numbers)
+    lines = promote_headings(
+        lines, stats, strip_heading_numbers or should_renumber_headings
+    )
     lines = normalize_image_tables(lines, stats)
     if drop_images:
         lines = remove_standalone_images(lines, stats)
     lines = normalize_spacing(lines)
     lines = add_missing_title(lines, source, title, no_title)
+    if should_renumber_headings:
+        lines = renumber_headings(lines, stats)
     return "\n".join(lines).rstrip() + "\n", stats
 
 
@@ -329,6 +434,7 @@ def main() -> int:
         args.no_title,
         not args.keep_images and not args.download_images,
         args.strip_heading_numbers,
+        args.renumber_headings,
     )
     if args.download_images:
         cleaned = localize_images(cleaned, args.output, args.download_images, stats)
@@ -346,6 +452,7 @@ def main() -> int:
     print(
         "cleaned: "
         f"{stats.promoted_headings} headings, "
+        f"{stats.renumbered_headings} headings renumbered, "
         f"{stats.converted_image_tables} image tables, "
         f"{stats.dropped_images} images dropped, "
         f"{stats.downloaded_images} images downloaded",
