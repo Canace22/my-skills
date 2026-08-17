@@ -1,0 +1,4 @@
+interface:
+  display_name: "微信公众号文章分析"
+  short_description: "采集公众号单篇数据，校准指标口径并生成可执行分析报告"
+  default_prompt: "使用 $analyze-wechat-articles 分析 Chrome 中近期发布的微信公众号文章数据，并整理关键结论和实验建议。"
