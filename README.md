@@ -31,6 +31,7 @@ Codex 换成 `~/.codex/skills/`。用软链接的好处是之后 `git pull` 就�
 | [vite-dev-server-troubleshooting](vite-dev-server-troubleshooting/SKILL.md) | Vite 项目跑起来了，浏览器控制台却一堆报错、页面渲染坏掉，或者报错指向源码里没有的代码 | 无 |
 | [run-web-project-locally](run-web-project-locally/SKILL.md) | 看到一个 GitHub 项目想"拉下来跑一下看看效果"：拉代码、装依赖、起服务，最后告诉你地址和怎么操作 | git，以及项目自己要的运行环境（多数是 Node.js） |
 | [game-asset-integration](game-asset-integration/SKILL.md) | 把做好的 3D 模型、骨骼动画接进网页游戏，并且从游戏镜头里确认它真的能动、站得稳、比例对 | 无 |
+| [media-processing](media-processing/SKILL.md) | 视频截图、视频转 GIF、图片改尺寸 / 裁剪 / 压缩 | ffmpeg、Python 3、`pip install pillow` |
 
 ## 使用前要知道
 

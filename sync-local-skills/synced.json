@@ -15,6 +15,14 @@
       "path": "~/.hermes/skills/software-development/game-asset-integration"
     }
   ],
+  "media-processing": [
+    {
+      "agent": "hermes",
+      "date": "2026-10-05",
+      "digest": "2dfd22bb3082903019f3cd10f0b4fd3df95e0afed21ce33a5f6225c95e7dd491",
+      "path": "~/.hermes/skills/media/media-processing"
+    }
+  ],
   "product-intro-video": [
     {
       "agent": "claude.ai",
