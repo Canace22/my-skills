@@ -1,0 +1,4 @@
+interface:
+  display_name: "Anime Gothic Character"
+  short_description: "Generate a single gothic anime character with real transparency"
+  default_prompt: "Create one isolated anime-style gothic character as a transparent PNG."
