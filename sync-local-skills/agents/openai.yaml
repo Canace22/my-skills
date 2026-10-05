@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sync Local Skills"
+  short_description: "把各个 AI agent 里自己写的 Skill 同步进仓库"
+  default_prompt: "Use $sync-local-skills to find skills I wrote in my local agents and sync the ones I pick into this repo."

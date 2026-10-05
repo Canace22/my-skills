@@ -4,6 +4,7 @@
 
 ## 2026-10-05
 
+- 新增 `sync-local-skills`：扫描本机各 AI agent（Claude Code、claude.ai 同步、Codex、Cursor、Hermes 等）里自己写的 Skill，挑选后同步进仓库，并检查 frontmatter、本机路径和疑似密钥。同步记录存在 `sync-local-skills/synced.json`，同步后在仓库里整理过的 Skill 不会被一直当成有改动。
 - 从 Codex 的个人 Skill 目录同步 `meshy-blender-character`（游戏角色与动物伙伴制作），保留脚本、参考资料和已有 Codex 界面配置。
 - 新增 `human-readable-docs`：写 README 等文档时切换到新人视角。
 - 新增 `anime-gothic-character`：生成单人透明背景的哥特风动漫角色，附带透明度校验和抠色脚本（Swift，仅 macOS）。

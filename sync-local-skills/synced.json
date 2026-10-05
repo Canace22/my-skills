@@ -1,0 +1,26 @@
+{
+  "ai-editorial-board": [
+    {
+      "agent": "hermes",
+      "date": "2026-10-05",
+      "digest": "45569477cb12d505d966c9a906c396c026b03007990c819d359c4047519754d4",
+      "path": "~/.hermes/skills/writing/ai-editorial-board"
+    }
+  ],
+  "product-intro-video": [
+    {
+      "agent": "claude.ai",
+      "date": "2026-10-05",
+      "digest": "3d252dcd652d36809b8899f9450190e40f51015dc180a316aedd49ccaefd3a02",
+      "path": "~/.claude/skills/synced/<account>/product-intro-video"
+    }
+  ],
+  "video-face-mosaic": [
+    {
+      "agent": "claude.ai",
+      "date": "2026-10-05",
+      "digest": "e98ff5f2fcf94a1a3d1e249d06796a32833e4e6c03897e9f136f8cd2f54a1d0b",
+      "path": "~/.claude/skills/synced/<account>/video-face-mosaic"
+    }
+  ]
+}
