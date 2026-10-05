@@ -7,6 +7,14 @@
       "path": "~/.hermes/skills/writing/ai-editorial-board"
     }
   ],
+  "game-asset-integration": [
+    {
+      "agent": "hermes",
+      "date": "2026-10-05",
+      "digest": "f7d275d7b7a72b4bee6150c0f7f38a0e8f80106f51ba5053df62b6728ef2a792",
+      "path": "~/.hermes/skills/software-development/game-asset-integration"
+    }
+  ],
   "product-intro-video": [
     {
       "agent": "claude.ai",
