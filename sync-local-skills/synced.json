@@ -15,6 +15,14 @@
       "path": "~/.claude/skills/synced/<account>/product-intro-video"
     }
   ],
+  "ui-styling-patterns": [
+    {
+      "agent": "hermes",
+      "date": "2026-10-05",
+      "digest": "62d817f27db60e852fc0ab75fe731ee3c8d65165f79eadcdd6cb4f55f4c35ae3",
+      "path": "~/.hermes/skills/software-development/ui-styling-patterns"
+    }
+  ],
   "video-face-mosaic": [
     {
       "agent": "claude.ai",
