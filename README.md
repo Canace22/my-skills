@@ -37,6 +37,7 @@ Codex 换成 `~/.codex/skills/`。用软链接的好处是之后 `git pull` 就�
 | [ai-cli-batch-experiments](ai-cli-batch-experiments/SKILL.md) | 想比较不同 AI 编程工具：同一个 prompt 让 Claude Code、Codex 各跑几次，收集产物、截图、填表，只给数据不下结论 | Claude Code / Codex 命令行、Python 3、`pip install playwright` |
 | [web-novel-creation](web-novel-creation/SKILL.md) | 写网文（番茄 / 起点 / 晋江）：查题材趋势、搭项目、设定世界观和人物、列章纲、写章节，或接着已有项目续写 | 无 |
 | [serialized-fiction](serialized-fiction/SKILL.md) | 写同人或原创长篇连载：管设定（原作事实和自创设定分开）、节奏、章节元数据，检查章节间重复 | Hermes（工具用法按它写的） |
+| [interactive-serial](interactive-serial/SKILL.md) | 在 Telegram 上读定时更新的互动小说，每集结尾选分支决定下一集走向 | Hermes（用到它的定时任务和 Telegram 推送） |
 
 ## 使用前要知道
 

@@ -31,6 +31,14 @@
       "path": "~/.hermes/skills/media/image-ocr-macos"
     }
   ],
+  "interactive-serial": [
+    {
+      "agent": "hermes",
+      "date": "2026-10-05",
+      "digest": "fc76919cbcddc02754f5b9a5441130e210bc503d69827ad05dbf71c85c4a8fe8",
+      "path": "~/.hermes/skills/interactive-serial"
+    }
+  ],
   "macos-automator-service-fix": [
     {
       "agent": "hermes",
