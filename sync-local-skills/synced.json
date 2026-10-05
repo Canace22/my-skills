@@ -31,6 +31,14 @@
       "path": "~/.claude/skills/synced/<account>/video-face-mosaic"
     }
   ],
+  "vite-dev-server-troubleshooting": [
+    {
+      "agent": "hermes",
+      "date": "2026-10-05",
+      "digest": "4405a9da668e14e6360bf4a40ecdb0e72ba687a64d1ed9fd38eb7b985a9eca1b",
+      "path": "~/.hermes/skills/software-development/vite-dev-server-troubleshooting"
+    }
+  ],
   "web-style-clone": [
     {
       "agent": "cursor",
