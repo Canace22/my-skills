@@ -4,9 +4,9 @@
 
 ## 2026-10-05
 
-- 用 `sync-local-skills` 从本机 agent 同步进 6 个 Skill，并按仓库约定整理（只留 name/description、去掉本机路径和个人项目信息、把各 agent 专用的工具写法改成通用说法）：
+- 用 `sync-local-skills` 从本机 agent 同步进 7 个 Skill，并按仓库约定整理（只留 name/description、去掉本机路径和个人项目信息、把各 agent 专用的工具写法改成通用说法）：
   - 来自 Cursor：`web-style-clone`
-  - 来自 Hermes：`ui-styling-patterns`、`vite-dev-server-troubleshooting`、`run-web-project-locally`、`game-asset-integration`、`media-processing`
+  - 来自 Hermes：`ui-styling-patterns`、`vite-dev-server-troubleshooting`、`run-web-project-locally`、`game-asset-integration`、`media-processing`、`image-ocr-macos`
 - 新增 `sync-local-skills`：扫描本机各 AI agent（Claude Code、claude.ai 同步、Codex、Cursor、Hermes 等）里自己写的 Skill，挑选后同步进仓库，并检查 frontmatter、本机路径和疑似密钥。同步记录存在 `sync-local-skills/synced.json`，同步后在仓库里整理过的 Skill 不会被一直当成有改动。
 - 从 Codex 的个人 Skill 目录同步 `meshy-blender-character`（游戏角色与动物伙伴制作），保留脚本、参考资料和已有 Codex 界面配置。
 - 新增 `human-readable-docs`：写 README 等文档时切换到新人视角。

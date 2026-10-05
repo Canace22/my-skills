@@ -15,6 +15,14 @@
       "path": "~/.hermes/skills/software-development/game-asset-integration"
     }
   ],
+  "image-ocr-macos": [
+    {
+      "agent": "hermes",
+      "date": "2026-10-05",
+      "digest": "d5296b4fb25d2b4c98f8b6c7f2f29ba4b93fb29841ee54e88bc1c68232cf14bf",
+      "path": "~/.hermes/skills/media/image-ocr-macos"
+    }
+  ],
   "media-processing": [
     {
       "agent": "hermes",
