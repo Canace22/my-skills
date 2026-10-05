@@ -34,6 +34,7 @@ Codex 换成 `~/.codex/skills/`。用软链接的好处是之后 `git pull` 就�
 | [media-processing](media-processing/SKILL.md) | 视频截图、视频转 GIF、图片改尺寸 / 裁剪 / 压缩 | ffmpeg、Python 3、`pip install pillow` |
 | [image-ocr-macos](image-ocr-macos/SKILL.md) | AI 看不了图时，在 Mac 上把截图里的文字读出来（报错信息、数字表格） | macOS（用系统自带的 Swift 和文字识别，不用另装） |
 | [ai-cli-batch-experiments](ai-cli-batch-experiments/SKILL.md) | 想比较不同 AI 编程工具：同一个 prompt 让 Claude Code、Codex 各跑几次，收集产物、截图、填表，只给数据不下结论 | Claude Code / Codex 命令行、Python 3、`pip install playwright` |
+| [web-novel-creation](web-novel-creation/SKILL.md) | 写网文（番茄 / 起点 / 晋江）：查题材趋势、搭项目、设定世界观和人物、列章纲、写章节，或接着已有项目续写 | 无 |
 
 ## 使用前要知道
 

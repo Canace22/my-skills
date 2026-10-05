@@ -79,6 +79,14 @@
       "path": "~/.hermes/skills/software-development/vite-dev-server-troubleshooting"
     }
   ],
+  "web-novel-creation": [
+    {
+      "agent": "hermes",
+      "date": "2026-10-05",
+      "digest": "f5b332d5766acfaab6b365dfa61e4bd3b0e1b2c1d65d72773122e6ddc3b2e949",
+      "path": "~/.hermes/skills/creative/web-novel-creation"
+    }
+  ],
   "web-style-clone": [
     {
       "agent": "cursor",
