@@ -24,6 +24,7 @@ Codex 换成 `~/.codex/skills/`。用软链接的好处是之后 `git pull` 就�
 | [ai-editorial-board](ai-editorial-board/SKILL.md) | 文章写完想让人"审个稿"：9 个编辑角色分别给意见、分析标题，发布后拿数据复盘；只提意见不替你改写 | 无 |
 | [product-intro-video](product-intro-video/SKILL.md) | 想给一个功能做介绍 / 演示视频：给它功能说明和几张截图，产出旁白脚本、分镜、套好设备外框的截图和能直接录屏的 PPT | Python 3、`pip install pillow`；做 PPT 时还要 `pip install python-pptx` |
 | [mmorpg-mvp-from-scratch](mmorpg-mvp-from-scratch/SKILL.md) | 从零做一个能联机、能打怪、能做任务的网页多人 RPG 原型 | Node.js（生成的项目要用） |
+| [meshy-blender-character](meshy-blender-character/SKILL.md) | 按参考图做游戏角色或动物伙伴，用 Meshy / 腾讯混元 3D 生成，再到 Blender 整理、做动画并接入游戏 | Blender、Blender MCP 插件、生成服务账号；脚本需要 Python 3，附带 MCP 客户端还需要 uv（运行命令自动装依赖） |
 
 ## 使用前要知道
 

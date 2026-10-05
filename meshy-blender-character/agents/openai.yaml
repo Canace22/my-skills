@@ -1,0 +1,4 @@
+interface:
+  display_name: "游戏角色与生物制作接入"
+  short_description: "用 Meshy 或混元 3D 制作角色与生物模型，并通过 Blender 接入游戏"
+  default_prompt: "使用 $meshy-blender-character，根据参考图和当前游戏设计角色或生物，遵循我指定的 3D 服务或选择合适服务生成模型，并按需制作动画、接入游戏。"

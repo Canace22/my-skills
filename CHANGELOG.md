@@ -4,6 +4,7 @@
 
 ## 2026-10-05
 
+- 从 Codex 的个人 Skill 目录同步 `meshy-blender-character`（游戏角色与动物伙伴制作），保留脚本、参考资料和已有 Codex 界面配置。
 - 新增 `human-readable-docs`：写 README 等文档时切换到新人视角。
 - 新增 `anime-gothic-character`：生成单人透明背景的哥特风动漫角色，附带透明度校验和抠色脚本（Swift，仅 macOS）。
 - 新增 `long-task-state`：长任务落盘 `STATE.md`，新会话冷启动续接。
