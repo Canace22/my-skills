@@ -22,5 +22,13 @@
       "digest": "e98ff5f2fcf94a1a3d1e249d06796a32833e4e6c03897e9f136f8cd2f54a1d0b",
       "path": "~/.claude/skills/synced/<account>/video-face-mosaic"
     }
+  ],
+  "web-style-clone": [
+    {
+      "agent": "cursor",
+      "date": "2026-10-05",
+      "digest": "fee950f0a8ff60e59be0695a91f0ab2ce8f0ed3bc184635b0f03f02ee0b044fb",
+      "path": "~/.cursor/skills/web-style-clone"
+    }
   ]
 }

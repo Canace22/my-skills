@@ -26,6 +26,7 @@ Codex 换成 `~/.codex/skills/`。用软链接的好处是之后 `git pull` 就�
 | [mmorpg-mvp-from-scratch](mmorpg-mvp-from-scratch/SKILL.md) | 从零做一个能联机、能打怪、能做任务的网页多人 RPG 原型 | Node.js（生成的项目要用） |
 | [meshy-blender-character](meshy-blender-character/SKILL.md) | 按参考图做游戏角色或动物伙伴，用 Meshy / 腾讯混元 3D 生成，再到 Blender 整理、做动画并接入游戏 | Blender、Blender MCP 插件、生成服务账号；脚本需要 Python 3，附带 MCP 客户端还需要 uv（运行命令自动装依赖） |
 | [sync-local-skills](sync-local-skills/SKILL.md) | 在 Claude Code、Codex、Cursor、Hermes 等工具里自己写了 Skill，想收进这个仓库：先列出哪些还没进仓库、哪些和仓库不一致，你挑完再拷进来并整理好 | Python 3 |
+| [web-style-clone](web-style-clone/SKILL.md) | 想让页面"照着这个网站的感觉做"：拆出参考网页的布局、配色、字体、间距和动效，整理成设计变量再写代码，不抄素材和 logo | 无 |
 
 ## 使用前要知道
 
