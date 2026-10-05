@@ -1,4 +1,12 @@
 {
+  "ai-cli-batch-experiments": [
+    {
+      "agent": "hermes",
+      "date": "2026-10-05",
+      "digest": "e4b062c05152a10eb8b9b6b38ebf59c06002c2cfa68f029f1e6746df5c06e37b",
+      "path": "~/.hermes/skills/research/ai-cli-batch-experiments"
+    }
+  ],
   "ai-editorial-board": [
     {
       "agent": "hermes",

@@ -33,6 +33,7 @@ Codex 换成 `~/.codex/skills/`。用软链接的好处是之后 `git pull` 就�
 | [game-asset-integration](game-asset-integration/SKILL.md) | 把做好的 3D 模型、骨骼动画接进网页游戏，并且从游戏镜头里确认它真的能动、站得稳、比例对 | 无 |
 | [media-processing](media-processing/SKILL.md) | 视频截图、视频转 GIF、图片改尺寸 / 裁剪 / 压缩 | ffmpeg、Python 3、`pip install pillow` |
 | [image-ocr-macos](image-ocr-macos/SKILL.md) | AI 看不了图时，在 Mac 上把截图里的文字读出来（报错信息、数字表格） | macOS（用系统自带的 Swift 和文字识别，不用另装） |
+| [ai-cli-batch-experiments](ai-cli-batch-experiments/SKILL.md) | 想比较不同 AI 编程工具：同一个 prompt 让 Claude Code、Codex 各跑几次，收集产物、截图、填表，只给数据不下结论 | Claude Code / Codex 命令行、Python 3、`pip install playwright` |
 
 ## 使用前要知道
 
