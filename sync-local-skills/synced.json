@@ -15,6 +15,14 @@
       "path": "~/.claude/skills/synced/<account>/product-intro-video"
     }
   ],
+  "run-web-project-locally": [
+    {
+      "agent": "hermes",
+      "date": "2026-10-05",
+      "digest": "a562675d07d98217c010916d8ae7aaa0c5b64ad3ef533cea2f681052ca88000b",
+      "path": "~/.hermes/skills/software-development/run-web-project-locally"
+    }
+  ],
   "ui-styling-patterns": [
     {
       "agent": "hermes",

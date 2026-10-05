@@ -29,6 +29,7 @@ Codex 换成 `~/.codex/skills/`。用软链接的好处是之后 `git pull` 就�
 | [web-style-clone](web-style-clone/SKILL.md) | 想让页面"照着这个网站的感觉做"：拆出参考网页的布局、配色、字体、间距和动效，整理成设计变量再写代码，不抄素材和 logo | 无 |
 | [ui-styling-patterns](ui-styling-patterns/SKILL.md) | 调 React 面板、侧栏的样式：嫌按钮花花绿绿、布局太松，或者要统一到全局设计变量 | 无 |
 | [vite-dev-server-troubleshooting](vite-dev-server-troubleshooting/SKILL.md) | Vite 项目跑起来了，浏览器控制台却一堆报错、页面渲染坏掉，或者报错指向源码里没有的代码 | 无 |
+| [run-web-project-locally](run-web-project-locally/SKILL.md) | 看到一个 GitHub 项目想"拉下来跑一下看看效果"：拉代码、装依赖、起服务，最后告诉你地址和怎么操作 | git，以及项目自己要的运行环境（多数是 Node.js） |
 
 ## 使用前要知道
 
