@@ -36,12 +36,14 @@ Codex 换成 `~/.codex/skills/`。用软链接的好处是之后 `git pull` 就�
 | [macos-automator-service-fix](macos-automator-service-fix/SKILL.md) | 在 Mac 上做了 Automator 快速操作（.workflow），Finder 右键菜单里却看不到 | macOS |
 | [ai-cli-batch-experiments](ai-cli-batch-experiments/SKILL.md) | 想比较不同 AI 编程工具：同一个 prompt 让 Claude Code、Codex 各跑几次，收集产物、截图、填表，只给数据不下结论 | Claude Code / Codex 命令行、Python 3、`pip install playwright` |
 | [web-novel-creation](web-novel-creation/SKILL.md) | 写网文（番茄 / 起点 / 晋江）：查题材趋势、搭项目、设定世界观和人物、列章纲、写章节，或接着已有项目续写 | 无 |
+| [serialized-fiction](serialized-fiction/SKILL.md) | 写同人或原创长篇连载：管设定（原作事实和自创设定分开）、节奏、章节元数据，检查章节间重复 | Hermes（工具用法按它写的） |
 
 ## 使用前要知道
 
 - **`ai-project-summary` 已改成目录结构。** 之前按旧说明手动建过 `ai-project-summary/` 目录的，删掉它，改成软链接仓库里的 `ai-project-summary/` 即可。
 - **`mmorpg-mvp-from-scratch` 原本写给 claude.ai 用**，最后交付那步提到的 `SendUserFile` 和 Project 文档只有 claude.ai 上有。在 Claude Code、Codex 里用时，打包好的 zip 需要你按 AI 给的路径自己去拿，项目总结可以改用 `ai-project-summary` 写进仓库。
 - **装了 Skill 不代表依赖也装好了。** 带脚本的 Skill（表格最后一列不是"无"的）第一次运行可能因为缺工具报错，按上表先装好。
+- **"需要额外装什么"写着 Hermes 的 Skill 只在 Hermes 里好用。** 它们是从 Hermes 同步来的，步骤里用到了 Hermes 特有的工具和定时任务，放到 Claude Code、Codex 里需要自己改写那部分。
 - **各目录里的 `agents/openai.yaml` 只给 Codex 用**，决定它在界面里显示的名字和简介。用 Claude Code 可以忽略。
 
 ## 更多

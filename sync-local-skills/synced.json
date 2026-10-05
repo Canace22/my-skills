@@ -63,6 +63,14 @@
       "path": "~/.hermes/skills/software-development/run-web-project-locally"
     }
   ],
+  "serialized-fiction": [
+    {
+      "agent": "hermes",
+      "date": "2026-10-05",
+      "digest": "3628e0ed371d55a8875d4e061ab09fb5963dbaf23113f225984299ed6915fdfa",
+      "path": "~/.hermes/skills/creative/serialized-fiction"
+    }
+  ],
   "ui-styling-patterns": [
     {
       "agent": "hermes",
